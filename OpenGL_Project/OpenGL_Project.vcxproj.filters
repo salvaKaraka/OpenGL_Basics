@@ -29,10 +29,7 @@
     <None Include="vertexShader.vert">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="fragmentShaderRed.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="fragmentSahderOrange.frag">
+    <None Include="fragmentShader.frag">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

@@ -1,0 +1,10 @@
+^D:\.INGENIERIA EN COMPUTACION\OPENGL_BASICS\GLFW-3.3.8\BUILD\CMAKEFILES\593D18470277B611EA65DAB4D3CC7F8F\GENERATE.STAMP.RULE
+setlocal
+"D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\bin\cmake.exe" "-SD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8" "-BD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build/GLFW.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

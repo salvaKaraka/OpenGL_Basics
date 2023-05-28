@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{29699D17-165A-3CC2-BD5F-352261925E0E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\bin\cmake.exe" "-SD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8" "-BD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build" --check-stamp-file "D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeDependentOption.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckLibraryExists.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindDoxygen.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindThreads.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\GNUInstallDirs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeRCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\cmake_uninstall.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3.pc.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3Config.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\bin\cmake.exe" "-SD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8" "-BD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build" --check-stamp-file "D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeDependentOption.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckLibraryExists.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindDoxygen.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindThreads.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\GNUInstallDirs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeRCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\cmake_uninstall.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3.pc.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3Config.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\bin\cmake.exe" "-SD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8" "-BD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build" --check-stamp-file "D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeDependentOption.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckLibraryExists.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindDoxygen.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindThreads.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\GNUInstallDirs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeRCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\cmake_uninstall.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3.pc.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3Config.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\bin\cmake.exe" "-SD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8" "-BD:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build" --check-stamp-file "D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeDependentOption.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\CheckLibraryExists.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindDoxygen.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\FindThreads.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\GNUInstallDirs.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\Windows.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\cmake-3.26.4-windows-x86_64\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeRCCompiler.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\3.26.4\CMakeSystem.cmake;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\cmake_uninstall.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3.pc.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw3Config.cmake.in;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\ZERO_CHECK.vcxproj">
+      <Project>{4FBE6741-A0FB-37A4-B92F-CA2C2952F62E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\boing.vcxproj">
+      <Project>{04058292-D43D-3F09-8BF6-793F4DE8334A}</Project>
+      <Name>boing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\clipboard.vcxproj">
+      <Project>{C174188F-4D1C-322A-AD87-F5B362BA03D6}</Project>
+      <Name>clipboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\cursor.vcxproj">
+      <Project>{5078CF00-E05A-3D40-AC2F-22338296E93F}</Project>
+      <Name>cursor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\empty.vcxproj">
+      <Project>{6BFE5915-EA23-3E08-BA2B-24D8600A57FA}</Project>
+      <Name>empty</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\events.vcxproj">
+      <Project>{65F2DFE2-956E-3103-994B-AA380E938BCA}</Project>
+      <Name>events</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\gamma.vcxproj">
+      <Project>{3DA0E770-9F77-363F-848F-826670AA4E5D}</Project>
+      <Name>gamma</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\gears.vcxproj">
+      <Project>{D8A7F4DA-8ADF-3908-A06C-7DA77D9334D5}</Project>
+      <Name>gears</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\src\glfw.vcxproj">
+      <Project>{10A2A746-BD0B-30D0-A334-407D3F78DC5B}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\glfwinfo.vcxproj">
+      <Project>{9A3AABCB-FDD6-3000-B5DF-7DAEF3D55701}</Project>
+      <Name>glfwinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\heightmap.vcxproj">
+      <Project>{C2BE62A3-9F9E-31D1-A059-BDF65B4A5870}</Project>
+      <Name>heightmap</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\icon.vcxproj">
+      <Project>{AFD8D77A-2369-3C90-9A04-0885742D0BCE}</Project>
+      <Name>icon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\iconify.vcxproj">
+      <Project>{7DEB40F8-48C4-3137-A03B-9910BC803404}</Project>
+      <Name>iconify</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\inputlag.vcxproj">
+      <Project>{C0C39487-E798-3CDC-B1D2-6BDB6B9247F0}</Project>
+      <Name>inputlag</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\joysticks.vcxproj">
+      <Project>{BD3BFE0A-B0C2-3138-A64D-57BE2946DA8F}</Project>
+      <Name>joysticks</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\monitors.vcxproj">
+      <Project>{BD2BFB26-7F39-337D-85B0-A390BDA46CE9}</Project>
+      <Name>monitors</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\msaa.vcxproj">
+      <Project>{CB96F1D2-52CC-3248-B180-293F83A06756}</Project>
+      <Name>msaa</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\offscreen.vcxproj">
+      <Project>{967D7B0B-B451-36C2-99D7-52AC979924E9}</Project>
+      <Name>offscreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\opacity.vcxproj">
+      <Project>{4C9D7005-6051-3E50-B876-31B496C87362}</Project>
+      <Name>opacity</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\particles.vcxproj">
+      <Project>{E680CE9F-99B8-317E-915E-81CC5166A028}</Project>
+      <Name>particles</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\reopen.vcxproj">
+      <Project>{AAC34C0B-8A2F-3D99-9962-CFC2D0E43433}</Project>
+      <Name>reopen</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\sharing.vcxproj">
+      <Project>{4B29C57D-4F16-3359-A3BC-0C894F2CBF06}</Project>
+      <Name>sharing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\simple.vcxproj">
+      <Project>{CCFD26AE-306D-3D5F-93A5-D1DA6199561C}</Project>
+      <Name>simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\splitview.vcxproj">
+      <Project>{85C55622-BB43-3176-ADFB-5E69F7EAF769}</Project>
+      <Name>splitview</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\tearing.vcxproj">
+      <Project>{D6AFE809-9E7D-3810-94C4-B60B2C512B4B}</Project>
+      <Name>tearing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\threads.vcxproj">
+      <Project>{81EA0D11-049C-3C32-ADFA-23F0EDD29A71}</Project>
+      <Name>threads</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\timeout.vcxproj">
+      <Project>{FA2ABF1D-2AE8-34EB-B005-32259A0B0353}</Project>
+      <Name>timeout</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\title.vcxproj">
+      <Project>{B611DE72-A340-3639-80BA-E870F1408C9F}</Project>
+      <Name>title</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\triangle-vulkan.vcxproj">
+      <Project>{5B46D53C-09B5-32A7-8E4F-883DC6719B05}</Project>
+      <Name>triangle-vulkan</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\examples\wave.vcxproj">
+      <Project>{815B7625-35C5-39AB-9A22-181B4596C5E4}</Project>
+      <Name>wave</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\windows.vcxproj">
+      <Project>{6A59C715-1C99-37B2-BDAE-525FC4358453}</Project>
+      <Name>windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,6 @@
+﻿  Building Custom Rule D:/.INGENIERIA EN COMPUTACION/OpenGL_Basics/glfw-3.3.8/tests/CMakeLists.txt
+  events.c
+  getopt.c
+  glad_gl.c
+  Generando código...
+  events.vcxproj -> D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\glfw-3.3.8\build\tests\Debug\events.exe

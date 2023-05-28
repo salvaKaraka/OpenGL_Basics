@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include;G:\Otros ordenadores\Mi PC\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Libs;G:\Otros ordenadores\Mi PC\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,6 +109,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(VC_IncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +140,13 @@
   <ItemGroup>
     <None Include="fragmentShader.frag" />
     <None Include="vertexShader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\OpenGL_Libraries\Include\image\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\textures\brick.jpg" />
+    <Image Include="assets\textures\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

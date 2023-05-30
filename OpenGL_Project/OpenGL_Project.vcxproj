@@ -142,7 +142,9 @@
     <None Include="vertexShader.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\OpenGL_Libraries\Include\Camera\camera.h" />
     <ClInclude Include="..\OpenGL_Libraries\Include\image\stb_image.h" />
+    <ClInclude Include="..\OpenGL_Libraries\Include\Shaders\shader.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\brick.jpg" />

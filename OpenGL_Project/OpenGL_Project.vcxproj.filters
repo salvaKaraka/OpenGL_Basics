@@ -40,6 +40,12 @@
     <ClInclude Include="..\OpenGL_Libraries\Include\image\stb_image.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\OpenGL_Libraries\Include\Camera\camera.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenGL_Libraries\Include\Shaders\shader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\brick.jpg">

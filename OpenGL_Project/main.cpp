@@ -7,6 +7,7 @@
 
 #include <iostream>
 
+#include "../OpenGL_Libraries/Include/Camera/camera.h"
 #include "../OpenGL_Libraries/Include/Shaders/shader.h"
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -14,14 +15,28 @@
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height); //resize viewport
-
 void processInput(GLFWwindow* window); //input control
-// stores how much we're seeing of either texture
-float mixValue = 0.2f;
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);//mouse tracking
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);//scroll tracking
 
 // settings
 const unsigned int width = 800;
 const unsigned int height = 600;
+
+// stores how much we're seeing of either texture
+float mixValue = 0.2f;
+
+// camera object
+glm::vec3 initialPos(0.0f, 0.0f, 3.0f);
+Camera camera(initialPos);
+float lastX = width / 2.0f;
+float lastY = height / 2.0f;
+bool firstMouse = true;
+
+//time variables
+float deltaTime = 0.0f;	// Time between current frame and last frame
+float lastFrame = 0.0f; // Time of last frame
+
 
 int main()
 {
@@ -54,6 +69,13 @@ int main()
     // Defining viewport
     glViewport(0, 0, width, height);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+    //mouse control
+    glfwSetCursorPosCallback(window, mouse_callback);
+    glfwSetScrollCallback(window, scroll_callback);
+
+    // tell GLFW to capture our mouse and hide it
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // Build and compile our shader program
     Shader shaderProgram("vertexShader.vert", "fragmentShader.frag");
@@ -125,13 +147,13 @@ int main()
     glGenVertexArrays(1, &VAO);
 
     // Initialization code for triangle_1 (done once unless your object frequently changes)
-    // 1. Bind Vertex Array Object
+    // Bind Vertex Array Object
     glBindVertexArray(VAO);
-    // 2. Copy our vertices array into a buffer for OpenGL to use
+    // Copy our vertices array into a buffer for OpenGL to use
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    // 3. Set our vertex attributes pointers
-   // position attribute
+    // Set our vertex attributes pointers
+    // position attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     // texture coord attribute
@@ -196,15 +218,19 @@ int main()
     shaderProgram.setInt("container_texture", 0);
     shaderProgram.setInt("emoji_texture", 1);
 
-    glm::mat4 projection = glm::mat4(1.0f);
-    projection = glm::perspective(glm::radians(45.0f), (float)width / (float)height, 0.1f, 100.0f);
-    shaderProgram.setMat4("projection", projection); //set only once (outside the loop)
+    glm::mat4 projection, model, view; //matrix declarations
+
 
     // Render loop
     while (!glfwWindowShouldClose(window))
     {
-        // Input
+        // Input and mouse
         processInput(window);
+
+        //Time variables
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
 
         // Rendering commands
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -219,17 +245,19 @@ int main()
         // set the texture mix value in the shader
         shaderProgram.setFloat("mixValue", mixValue);
 
+        //set ray projections 
+        projection = glm::perspective(glm::radians(camera.Zoom), (float)width / (float)height, 0.1f, 100.0f);
+        shaderProgram.setMat4("projection", projection); //set only once (outside the loop)
 
-        //4. create transformations
-        glm::mat4 model, view = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
-        view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-        view = glm::rotate(view, (float)glfwGetTime(), glm::vec3(0.2f, 0.2f, 0.2f));
-        
+        //set view
+        view = camera.GetViewMatrix();
         shaderProgram.setMat4("view", view);// pass transformations to the shaders
-        //5. loop to create multiple triangles
+
+        //loop to create multiple triangles
         glBindVertexArray(VAO);
         for (int i = 0; i < 10; i++) {
             
+            //transform positions and rotations
             model = glm::mat4(1.0f);
             model = glm::translate(model, cubePositions[i]);
             float angle = 20.0f * i;
@@ -249,11 +277,6 @@ int main()
     return 0;
 }
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
-
 void processInput(GLFWwindow* window)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -271,4 +294,49 @@ void processInput(GLFWwindow* window)
         if (mixValue <= 0.0f)
             mixValue = 0.0f;
     }
+    const float cameraSpeed = 3.5f*deltaTime; // adjust velocity according the time and not the hardware
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        camera.ProcessKeyboard(FORWARD, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        camera.ProcessKeyboard(BACKWARD, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        camera.ProcessKeyboard(LEFT, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        camera.ProcessKeyboard(RIGHT, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+        camera.ProcessKeyboard(UP, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+        camera.ProcessKeyboard(DOWN, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+        camera.Reset(initialPos);
+}
+
+void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
+{
+    float xpos = static_cast<float>(xposIn);
+    float ypos = static_cast<float>(yposIn);
+
+    if (firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+
+    float xoffset = xpos - lastX;
+    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
+    lastX = xpos;
+    lastY = ypos;
+
+    camera.ProcessMouseMovement(xoffset, yoffset);
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    camera.ProcessMouseScroll(static_cast<float>(yoffset));
+}
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
 }

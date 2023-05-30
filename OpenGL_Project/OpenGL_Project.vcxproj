@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>G:\Otros ordenadores\Mi PC\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include\glm;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include;G:\Otros ordenadores\Mi PC\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include;$(IncludePath)</IncludePath>
+    <IncludePath>G:\Otros ordenadores\Mi PC\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include\glm;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include;G:\Otros ordenadores\Mi PC\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include;D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Include\glm;$(IncludePath)</IncludePath>
     <LibraryPath>D:\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Libs;G:\Otros ordenadores\Mi PC\.INGENIERIA EN COMPUTACION\OpenGL_Basics\OpenGL_Libraries\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
